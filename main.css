@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 250px;
+  padding: 20px 30px;
+  padding-top: 40px;
+  font-weight: 300;
+}
+
+.container .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.container .text .quote-text {
+  font-size: .8em;
+  font-weight: 300;
+  font-style: italic;
+  position: relative;
+  line-height: 1.5em;
+  word-spacing: 1px;
+  -webkit-animation: 1s both 1s fadeIn;
+          animation: 1s both 1s fadeIn;
+}
+
+.container .text .quote-text::before {
+  content: "\201c";
+  font-size: 2.5em;
+  font-weight: 200;
+  display: block;
+  position: absolute;
+  top: -7px;
+  left: -12px;
+  -webkit-animation: 2s both 1s fadeIn;
+          animation: 2s both 1s fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container .text .author {
+  margin: 15px 0;
+  font-weight: 400;
+  font-size: .7em;
+  -webkit-animation: 2s both 3s slideIn;
+          animation: 2s both 3s slideIn;
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.container .btn-confirm {
+  width: 100%;
+}
+
+.container .btn-confirm .btn {
+  font-weight: 100;
+  padding: 10px 10px;
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid #555555;
+  text-transform: uppercase;
+  color: #555555;
+  border-radius: 2em;
+  letter-spacing: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: background-color .2s ease-in-out, -webkit-box-shadow .4s ease-in-out;
+  transition: background-color .2s ease-in-out, -webkit-box-shadow .4s ease-in-out;
+  transition: box-shadow .4s ease-in-out, background-color .2s ease-in-out;
+  transition: box-shadow .4s ease-in-out, background-color .2s ease-in-out, -webkit-box-shadow .4s ease-in-out;
+}
+
+.container .btn-confirm .btn:hover {
+  -webkit-box-shadow: 0px 1px 5px #555555;
+          box-shadow: 0px 1px 5px #555555;
+  background-color: #2ecc71;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

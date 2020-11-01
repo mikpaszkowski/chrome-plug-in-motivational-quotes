@@ -1,0 +1,23 @@
+{
+    "name": "UpQuote - quote your day!",
+
+    "version": "1.0.0",
+
+    "description": "Random quotes generator which makes your day!",
+
+    "manifest_version": 2,
+
+    "incognito": "split",
+
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+
+    "permissions": [
+        "activeTab"
+    ],
+
+    "icons": {
+        "128": "quoteIcon.png"
+    }
+}
