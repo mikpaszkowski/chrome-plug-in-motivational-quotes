@@ -10,8 +10,6 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
 }
 
 .container {
@@ -32,6 +30,10 @@ body {
   padding: 20px 30px;
   padding-top: 40px;
   font-weight: 300;
+  -webkit-transition: height 2s ease-in-out, -webkit-transform 1s ease-in-out 1s;
+  transition: height 2s ease-in-out, -webkit-transform 1s ease-in-out 1s;
+  transition: transform 1s ease-in-out 1s, height 2s ease-in-out;
+  transition: transform 1s ease-in-out 1s, height 2s ease-in-out, -webkit-transform 1s ease-in-out 1s;
 }
 
 .container .text {
@@ -139,12 +141,13 @@ body {
   color: #555555;
   border-radius: 2em;
   letter-spacing: 4px;
+  outline: none;
   background-color: transparent;
   cursor: pointer;
-  -webkit-transition: background-color .2s ease-in-out, -webkit-box-shadow .4s ease-in-out;
-  transition: background-color .2s ease-in-out, -webkit-box-shadow .4s ease-in-out;
-  transition: box-shadow .4s ease-in-out, background-color .2s ease-in-out;
-  transition: box-shadow .4s ease-in-out, background-color .2s ease-in-out, -webkit-box-shadow .4s ease-in-out;
+  -webkit-transition: background-color .2s ease-in-out,  color .2s ease-in, letter-spacing .7s ease-in-out 1s, opacity .6s,  -webkit-box-shadow .4s ease-in-out,  -webkit-transform .5s;
+  transition: background-color .2s ease-in-out,  color .2s ease-in, letter-spacing .7s ease-in-out 1s, opacity .6s,  -webkit-box-shadow .4s ease-in-out,  -webkit-transform .5s;
+  transition: box-shadow .4s ease-in-out,  background-color .2s ease-in-out,  color .2s ease-in, letter-spacing .7s ease-in-out 1s, transform .5s, opacity .6s;
+  transition: box-shadow .4s ease-in-out,  background-color .2s ease-in-out,  color .2s ease-in, letter-spacing .7s ease-in-out 1s, transform .5s, opacity .6s,  -webkit-box-shadow .4s ease-in-out,  -webkit-transform .5s;
 }
 
 .container .btn-confirm .btn:hover {
@@ -152,5 +155,12 @@ body {
           box-shadow: 0px 1px 5px #555555;
   background-color: #2ecc71;
   color: white;
+  letter-spacing: 10px;
+}
+
+.btn-close {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */

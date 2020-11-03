@@ -14,8 +14,6 @@ $flat-green: #2ecc71;
 body{
     font-family: $font-stack;
     font-size: 15px;
-    transition: all 1s ease-in-out;
-    
 }
 
 
@@ -28,6 +26,7 @@ body{
     padding: 20px 30px;
     padding-top: 40px;
     font-weight: 300;
+    transition: transform 1s ease-in-out 1s, height 2s ease-in-out;
 
     .text{
         display: flex;
@@ -89,8 +88,6 @@ body{
         
         }
     }
-
-
     .btn-confirm{
         width: 100%;
 
@@ -104,15 +101,30 @@ body{
             color: #555555;
             border-radius: 2em;
             letter-spacing: 4px;
+            outline: none;
             background-color: transparent;
             cursor: pointer;
-            transition: box-shadow .4s ease-in-out, background-color .2s ease-in-out;
+            transition: box-shadow .4s ease-in-out, 
+                        background-color .2s ease-in-out, 
+                        color .2s ease-in,
+                        letter-spacing .7s ease-in-out 1s,
+                        transform .5s,
+                        opacity .6s;
+
 
             &:hover{
                 box-shadow: 0px 1px 5px #555555;
                 background-color: $flat-green;
                 color: white;
+                letter-spacing: 10px;
             }
         }
     }
 }
+
+
+.btn-close{
+    transform: scale(1.2);
+    opacity: 0;
+}
+
