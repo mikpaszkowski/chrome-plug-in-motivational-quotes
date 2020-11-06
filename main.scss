@@ -22,11 +22,22 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 250px;
     padding: 20px 30px;
     padding-top: 40px;
     font-weight: 300;
     transition: transform 1s ease-in-out 1s, height 2s ease-in-out;
+
+    .error{
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: .7em;
+        font-weight: 400;
+    }
 
     .text{
         display: flex;
@@ -40,9 +51,9 @@ body{
             position: relative;
             line-height: 1.5em;
             word-spacing: 1px;
-            animation: 1s both 1s fadeIn;
+            transition: opacity 1s;
+            opacity: 0;
             
-
 
             &::before{
                 content: "\201c";
@@ -70,7 +81,7 @@ body{
             margin: 15px 0;
             font-weight: 400;
             font-size: .7em;
-            animation: 2s both 3s slideIn;
+            animation: 2s both 2s slideIn;
 
 
             @keyframes slideIn {

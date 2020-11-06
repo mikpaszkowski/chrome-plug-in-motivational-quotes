@@ -26,6 +26,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   width: 250px;
   padding: 20px 30px;
   padding-top: 40px;
@@ -34,6 +35,17 @@ body {
   transition: height 2s ease-in-out, -webkit-transform 1s ease-in-out 1s;
   transition: transform 1s ease-in-out 1s, height 2s ease-in-out;
   transition: transform 1s ease-in-out 1s, height 2s ease-in-out, -webkit-transform 1s ease-in-out 1s;
+}
+
+.container .error {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: .7em;
+  font-weight: 400;
 }
 
 .container .text {
@@ -59,8 +71,9 @@ body {
   position: relative;
   line-height: 1.5em;
   word-spacing: 1px;
-  -webkit-animation: 1s both 1s fadeIn;
-          animation: 1s both 1s fadeIn;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  opacity: 0;
 }
 
 .container .text .quote-text::before {
@@ -97,8 +110,8 @@ body {
   margin: 15px 0;
   font-weight: 400;
   font-size: .7em;
-  -webkit-animation: 2s both 3s slideIn;
-          animation: 2s both 3s slideIn;
+  -webkit-animation: 2s both 2s slideIn;
+          animation: 2s both 2s slideIn;
 }
 
 @-webkit-keyframes slideIn {
